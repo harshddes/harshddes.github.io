@@ -528,8 +528,8 @@ body[data-detached="true"] .project .image-container {
   overflow: hidden;
   z-index: -1;
   transform: translate3d(-50%, 0, 0);
-  width: 40em;
-  max-width: 85vw;
+  width: 60em;
+  max-width: 55vw;
   background: url(images/content_bg.gif) transparent no-repeat center/100% 100%;
 }
 
@@ -603,6 +603,49 @@ body[data-detached="true"] .project .image-container {
   background: url(images/highlight.gif) transparent no-repeat center/100% 100%;
   white-space: nowrap;
 }
+
+.project .description__inner ul,
+.project .description__inner ul ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.project .description__inner ul li {
+  position: relative;
+  padding-left: 20px;
+  text-align: left;
+  margin-bottom: 0.1em;
+  font-size: 1em;
+}
+
+.project .description__inner ul li::before {
+  content: '•';
+  font-size: 2.1em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  line-height: 1;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust to align properly */
+}
+
+/* Style for nested ul */
+.project .description__inner ul ul {
+  list-style-type: circle; /* Hollow bullets for nested items */
+  padding-left: 50px;
+}
+
+/* Prevent the ::before pseudo-element from affecting nested li */
+.project .description__inner ul ul li::before {
+  content: none; /* Removes custom bullet */
+}
+
+/* Optional: Style for nested li if you want to change font size or other properties */
+.project .description__inner ul ul li {
+  font-size: 1em; /* Smaller text for sub-items, adjust as needed */
+}
+
 
 .project .keywords {
   color: #51c9ab;
