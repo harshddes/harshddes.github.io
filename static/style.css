@@ -528,7 +528,7 @@ body[data-detached="true"] .project .image-container {
   overflow: hidden;
   z-index: -1;
   transform: translate3d(-50%, 0, 0);
-  width: 60em;
+  width: 55em;
   max-width: 55vw;
   background: url(images/content_bg.gif) transparent no-repeat center/100% 100%;
 }
